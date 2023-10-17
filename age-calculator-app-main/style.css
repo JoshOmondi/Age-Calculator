@@ -27,6 +27,7 @@ body {
   max-width: 85%;
   padding: 33px;
   position: relative;
+  border-radius: 20px;
   border-bottom-right-radius: 170px;
 }
 input {
@@ -34,8 +35,9 @@ input {
   padding: 10px;
   border-radius: 7px;
   border: 2px solid var(--Off-white);
-  border: none;
+  border: solid 1px gray;
   outline: none;
+  opacity: 0.65;
 }
 input:focus {
   border: 2px solid var(--Purple);
@@ -59,7 +61,7 @@ small {
   right: 33px;
   top: 62px;
   cursor: pointer;
-  background: rgb(166, 166, 214);
+  background: rgb(89, 89, 224);
 }
 .output span {
   font-size: 2.81rem;
@@ -74,9 +76,27 @@ small {
   flex-direction: column;
   margin-left: 20px;
   margin-bottom: 20px;
+  
 }
 .input-flex {
   display: flex;
   border-bottom: 2px solid var(--Off-white);
   margin-bottom: 21px;
+}
+@media (max-width: 750px) {
+  input{
+    width: 78%;
+  }
+  .output span{
+    font-size: 1.70rem;
+  }
+  .submit-btn{
+    width: 45px;
+    height: 45px;
+    right: 45%;
+    top: 100px;
+  }
+  .submit-btn img{
+    transform: scale(0.5);
+  }
 }
